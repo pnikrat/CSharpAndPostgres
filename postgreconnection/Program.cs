@@ -10,6 +10,16 @@ namespace postgreconnection
     {
         static void Main(string[] args)
         {
+            List<string> MyLocalInventory = new List<string>();
+
+            MyLocalInventory = Inventory.GetLocalInventory();
+            MyLocalInventory.Sort();
+
+            foreach(string x in MyLocalInventory)
+            {
+                Console.WriteLine(x);
+            }
+            Console.ReadLine();
         }
     }
 }
